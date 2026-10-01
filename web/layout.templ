@@ -1,0 +1,24 @@
+package web
+
+// Page wraps every screen with the shared document head, styles and scripts.
+templ Page(title string, body templ.Component) {
+	<!doctype html>
+	<html lang="en" class="h-full">
+		<head>
+			<meta charset="utf-8"/>
+			<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+			<meta name="theme-color" content="#008069"/>
+			<title>{ title }</title>
+			<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23008069'><path d='M12 2C6.5 2 2 6.1 2 11.2c0 2.9 1.5 5.5 3.8 7.2L5 22l4-1.4c.9.3 2 .5 3 .5 5.5 0 10-4.1 10-9.2S17.5 2 12 2z'/></svg>"/>
+			<link rel="stylesheet" href="/static/css/styles.css"/>
+			<script defer src="/static/js/api.js"></script>
+			<script defer src="/static/js/ws.js"></script>
+			<script defer src="/static/js/webrtc.js"></script>
+			<script defer src="/static/js/app.js"></script>
+			<script defer src="/static/js/vendor/alpine.min.js"></script>
+		</head>
+		<body class="h-full antialiased">
+			@body
+		</body>
+	</html>
+}

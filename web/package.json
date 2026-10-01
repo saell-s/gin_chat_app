@@ -1,0 +1,20 @@
+{
+  "name": "gin-chat-web",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build:js": "tsc -p tsconfig.json",
+    "build:css": "tailwindcss -i ./static/css/app.css -o ./static/css/styles.css --minify",
+    "build": "npm run build:js && npm run build:css",
+    "watch:css": "tailwindcss -i ./static/css/app.css -o ./static/css/styles.css --watch"
+  },
+  "dependencies": {
+    "alpinejs": "^3.14.9"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.11",
+    "tailwindcss": "^4.1.11",
+    "typescript": "^5.8.3"
+  }
+}

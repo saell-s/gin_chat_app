@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@source "../../**/*.templ";
+@source "../../ts/**/*.ts";
+@source "../../static/js/*.js";
+
+@theme {
+  --font-sans: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+
+  /* WhatsApp inspired palette */
+  --color-wa-teal: #00a884;
+  --color-wa-teal-dark: #008069;
+  --color-wa-teal-light: #d9fdd3;
+  --color-wa-panel: #f0f2f5;
+  --color-wa-panel-dark: #111b21;
+  --color-wa-bubble: #ffffff;
+  --color-wa-bubble-out: #d9fdd3;
+  --color-wa-chat: #efeae2;
+  --color-wa-header: #f0f2f5;
+  --color-wa-border: #e9edef;
+  --color-wa-muted: #667781;
+  --color-wa-accent: #027eb5;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--color-wa-panel);
+  color: #111b21;
+  font-family: var(--font-sans);
+}
+
+/* Chat wallpaper: subtle doodle-free pattern. */
+.chat-wallpaper {
+  background-color: var(--color-wa-chat);
+  background-image: radial-gradient(circle at 1px 1px, rgba(0, 0, 0, 0.06) 1px, transparent 0);
+  background-size: 22px 22px;
+}
+
+/* Custom scrollbars */
+.thin-scroll::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.thin-scroll::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
+.thin-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+[x-cloak] {
+  display: none !important;
+}
+
+.tick {
+  letter-spacing: -4px;
+}
